@@ -29,7 +29,9 @@
                     %br/ 
                     =f.text_field :description,{:type => "field", :placeholder=>"¿Cuentanos porque deberias ir?", :class=>"form-control"}
                     %br/ 
-                    =f.submit 
+                    %button{:class=>"btn btn-primary btn-lg"} 
+                        ¡Yo quiero ir!
+                        -f.submit 
 %section.descripcion
     .container
         .row
