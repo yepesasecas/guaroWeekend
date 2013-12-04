@@ -4,6 +4,20 @@ body, h1,h2{
 	font-family: 'Raleway', sans-serif;
 }
 
+.titulo{
+	padding: 1% 0%;
+	background-color: #EF6B11;
+	border-bottom :5px solid #139FE5;
+	h1{
+		font-size: 2.5em;
+		color: #FFFFFF;
+	}
+}
+.descripcion{
+	.descrip{
+	}
+}
+
 .centrado{
 	text-align: center;
 	img{
@@ -13,16 +27,32 @@ body, h1,h2{
 	text-align: right;
 }
 
-.titulo{
+.formulario{
 	padding: 5% 0%;
-	color: #EF6B11;	
+	color: #139FE5;	
 }
 .reglas{
 	margin: 1% 0%;
-	padding: 5% 0%;
-	background-color: #EF6B11;
-	color: #ffffff;
+	padding: 1% 0%;
+	background-color: #EEEEEE;
+	color:  #EF6B11;
 }
+.numero_inscritos{
+	background-color:  #139FE5;
+	margin: 3% 0% 0% 0%;
+	padding: 1% 0%;
+	p{
+		font-size: 2em;
+		color: #FFFFFF;
+		span{
+			font-size: 3em;
+		}
+	}
+}
+.comentarios{
+	background-color:  #EEEEEE;
+}
+
 .inscripcion{
 }
 .texto-titulo{

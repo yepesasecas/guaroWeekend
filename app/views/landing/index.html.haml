@@ -1,27 +1,89 @@
 %section.titulo
     .container
         .row
+            .col-md-8.col-md-offset-2
+                .centrado
+                    %h1 Un fin de semana con piscina, trago , buena música, geeks y aplicaciones.
+
+%section.formulario
+    .container
+        .row
             .col-md-5
                 .centrado-derecha
                     =image_tag "logo.png"
             .inscripcion.col-md-4
-                %h2 ¡Inscribete aqui!
-                %input{:type => "text", :placeholder=>"Nombre", :class=>"form-control"}/ 
-                %br/
-                %input{:type => "email", :placeholder=>"Email", :class=>"form-control"}/ 
-                %br/
-                %input{:type => "field", :placeholder=>"¿Cuentanos porque deberias ir?", :class=>"form-control"}/ 
-                %br/ 
-                %a{:class=>"btn btn-lg btn-primary btn-block", :href => "#" } ¡Yo me inscribo!
+                -[:notice, :alert].each do |level|
+                    -unless flash[level].blank?
+                        -if level==:notice
+                            .alert.alert-success
+                                =content_tag :p, flash[level]
+                        -if level==:alert
+                            .alert.alert-danger
+                                =content_tag :p, flash[level]
 
-%section.reglas 
+                %h2 ¡Inscribete aqui!
+                =form_for(@user) do |f|
+                    =f.text_field :name, {:type => "text", :placeholder=>"Nombre", :class=>"form-control"}
+                    %br/ 
+                    =f.text_field :email,{:type => "email", :placeholder=>"Email", :class=>"form-control"}
+                    %br/ 
+                    =f.text_field :description,{:type => "field", :placeholder=>"¿Cuentanos porque deberias ir?", :class=>"form-control"}
+                    %br/ 
+                    =f.submit 
+%section.descripcion
+    .container
+        .row
+            .col-md-4.descrip
+                %h1 Las Reglas
+                %ol 
+                    %li
+                        %strong  ¡TOMA EL QUE TRABAJA!
+                    %li ¡Mala cara repite!
+                    %li ¡Gota repite!
+                    %li Se debe mostrar una aplicación al final del fin de semana.
+
+            .col-md-4.descrip
+                %h1 ¿Que dia es y donde?
+                %p Este es un evento de GEEKS para GEEKS y organizado por GEEKS, y ponemos a disposicion de uds la fecha del evento.
+                %p Estaremos avisando y anunciando las fechas para que todos esten informados.
+                %p El lugar del evento es en tierra caliente cerca a Bogota, lo mas probable es que sea entre Girardot o Melgar. Igual escuchamos sugerencias de todos!
+                %strong No se te olvide proponer tu fecha en los comentarios.
+            
+            .col-md-4.descrip
+                %h1 ¿Cuanto vale?
+                %strong No buscamos hacer plata! Solo buscamos unir a la comunidad y compartir todos en un ambiente diferente.
+                %p ¡Entre mas personas se inscriban, mas barato! Invita a todos tus amigos que hagan parte de la comunidad GEEK.
+                <div class="fb-like" data-href="https://www.guaroweekend.com" data-layout="standard" data-action="recommend" data-show-faces="false" data-share="true"></div>
+%section.numero_inscritos
+    .container
+        .row
+            .col-md-4.col-md-offset-4
+                .centrado
+                    %p
+                        %span=@count
+                        inscritos!
+
+%section.comentarios
     .container
         .row
             .col-md-8.col-md-offset-2
                 .centrado
-                    %h1 Un fin de semana con piscina, trago , buena música, geeks y aplicaciones.
-%section
-    .texto-titulo
-        %h1 Mentores
-        %iframe{:width =>"420", :height=>"345", :src => "http://www.youtube.com/embed/Qm41-LtxBhY" }
+                    %h2 ¡No se te olvide comentar!
+                    %h4 ¿Que fecha propones?
+                    %h4 ¿Donde te gustaria que fuera el evento?
+                    <div class="fb-comments" data-href="http://www.guaroweekend.com" data-numposts="15" data-colorscheme="light"></div>
+
+
+/
+    %section.reglas
+        .container
+            .row
+                .col-md-8.col-md-offset-2
+                    .centrado
+                        %h1 Un fin de semana con piscina, trago , buena música, geeks y aplicaciones.
+/
+    %section
+        .texto-titulo
+            %h1 Mentores
+            %iframe{:width =>"420", :height=>"345", :src => "http://www.youtube.com/embed/Qm41-LtxBhY" }
 
