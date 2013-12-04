@@ -21,13 +21,13 @@
                             .alert.alert-danger
                                 =content_tag :p, flash[level]
 
-                %h2 ¡Inscribete aqui!
+                %h2 ¡Inscríbete aquí!
                 =form_for(@user) do |f|
                     =f.text_field :name, {:type => "text", :placeholder=>"Nombre", :class=>"form-control"}
                     %br/ 
                     =f.text_field :email,{:type => "email", :placeholder=>"Email", :class=>"form-control"}
                     %br/ 
-                    =f.text_field :description,{:type => "field", :placeholder=>"¿Cuentanos porque deberias ir?", :class=>"form-control"}
+                    =f.text_field :description,{:type => "field", :placeholder=>"¿Cuéntanos por qué deberías ir?", :class=>"form-control"}
                     %br/ 
                     %button{:class=>"btn btn-primary btn-lg"} 
                         ¡Yo quiero ir!
@@ -45,16 +45,16 @@
                     %li Se debe mostrar una aplicación al final del fin de semana.
 
             .col-md-4.descrip
-                %h1 ¿Que dia es y donde?
-                %p Este es un evento de GEEKS para GEEKS y organizado por GEEKS, y ponemos a disposicion de uds la fecha del evento.
-                %p Estaremos avisando y anunciando las fechas para que todos esten informados.
-                %p El lugar del evento es en tierra caliente cerca a Bogota, lo mas probable es que sea entre Girardot o Melgar. Igual escuchamos sugerencias de todos!
+                %h1 ¿Qué dia es y dónde?
+                %p Este es un evento de GEEKS para GEEKS y organizado por GEEKS, y ponemos a disposicion de ustedes la fecha del evento.
+                %p Estaremos avisando y anunciando las fechas para que todos estén informados.
+                %p El lugar del evento es en tierra caliente cerca a Bogotá, lo mas probable es que sea entre Girardot o Melgar. Igual escuchamos sugerencias de todos!
                 %strong No se te olvide proponer tu fecha en los comentarios.
             
             .col-md-4.descrip
                 %h1 ¿Cuanto vale?
                 %strong No buscamos hacer plata! Solo buscamos unir a la comunidad y compartir todos en un ambiente diferente.
-                %p ¡Entre mas personas se inscriban, mas barato! Invita a todos tus amigos que hagan parte de la comunidad GEEK.
+                %p ¡Entre más personas se inscriban, más barato! Invita a todos tus amigos que hagan parte de la comunidad GEEK.
                 <div class="fb-like" data-href="https://www.guaroweekend.com" data-layout="standard" data-action="recommend" data-show-faces="false" data-share="true"></div>
 %section.numero_inscritos
     .container
@@ -71,8 +71,8 @@
             .col-md-8.col-md-offset-2
                 .centrado
                     %h2 ¡No se te olvide comentar!
-                    %h4 ¿Que fecha propones?
-                    %h4 ¿Donde te gustaria que fuera el evento?
+                    %h4 ¿Qué fecha propones?
+                    %h4 ¿Donde te gustaría que fuera el evento?
                     <div class="fb-comments" data-href="http://www.guaroweekend.com" data-numposts="15" data-colorscheme="light"></div>
 
 
