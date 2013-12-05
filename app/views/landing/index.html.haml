@@ -4,13 +4,14 @@
             .col-md-8.col-md-offset-2
                 .centrado
                     %h1 Un fin de semana con piscina, trago , buena música, geeks y aplicaciones.
+                    %p Creemos que las mejores ideas se realizan en compañia de amigos y unos buenos tragos!
 
 %section.formulario
     .container
         .row
-            .col-md-5
-                .centrado-derecha
-                    =image_tag "logo.png"
+            .col-md-3.col-md-offset-2
+                .centrado
+                    =image_tag "logo2.png"
             .inscripcion.col-md-4
                 -[:notice, :alert].each do |level|
                     -unless flash[level].blank?
@@ -21,7 +22,8 @@
                             .alert.alert-danger
                                 =content_tag :p, flash[level]
 
-                %h2 ¡Inscríbete aquí!
+                %h2 ¡Inscríbete! Cupos Limitados!
+                %p Te mantendremos informado de todo lo que ocurra con el primer Guaro Weekend!
                 =form_for(@user) do |f|
                     =f.text_field :name, {:type => "text", :placeholder=>"Nombre", :class=>"form-control"}
                     %br/ 
